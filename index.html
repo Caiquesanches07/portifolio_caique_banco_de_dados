@@ -75,7 +75,7 @@
 
       <section class="der-section">
         <div class="section-heading"><div><div class="eyebrow">MODELO RELACIONAL</div><h2>Diagrama Entidade-Relacionamento</h2><p>Visualização derivada do DDL enviado. Amplie e mova o diagrama para explorar os relacionamentos.</p></div><button id="openDer" class="primary-button">Abrir visualizador <span>↗</span></button></div>
-        <button id="derPreview" class="der-preview" aria-label="Abrir diagrama completo"><img src="assets/der.png" alt="Diagrama Entidade-Relacionamento do banco Trimix Sorveteria"><span class="preview-overlay">Clique para ampliar <b>＋</b></span></button>
+        <button id="derPreview" class="der-preview" aria-label="Abrir diagrama completo"><img src="assets/der.svg" alt="Diagrama Entidade-Relacionamento do banco Trimix Sorveteria"><span class="preview-overlay">Clique para ampliar <b>＋</b></span></button>
         <p class="fineprint">A cardinalidade é inferida das chaves estrangeiras e das restrições de unicidade declaradas no DDL. Regras adicionais implementadas por triggers/procedures devem ser conferidas com o grupo.</p>
       </section>
 
@@ -107,7 +107,7 @@
         <div class="section-heading"><div><div class="eyebrow">ARQUIVOS DO PROJETO</div><h2>Documentação técnica</h2><p>Materiais de referência utilizados na construção desta versão preliminar.</p></div></div>
         <div class="docs-grid">
           <a class="doc-card" href="docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf" target="_blank" rel="noopener"><span class="doc-icon pdf">PDF</span><b>Requisitos revisados</b><small>Versão de trabalho 1.3 · RF/RNF, regras e histórico de revisão</small><span class="doc-arrow">↗</span></a>
-          <a class="doc-card" href="assets/der.png" target="_blank" rel="noopener"><span class="doc-icon img">PNG</span><b>DER atualizado</b><small>Captura do modelo EER recebido do grupo no MySQL Workbench</small><span class="doc-arrow">↗</span></a>
+          <a class="doc-card" href="assets/der.svg" target="_blank" rel="noopener"><span class="doc-icon img">PNG</span><b>DER atualizado</b><small>Captura do modelo EER recebido do grupo no MySQL Workbench</small><span class="doc-arrow">↗</span></a>
           <a class="doc-card" href="docs/DDL_Original_Trimix.sql" download><span class="doc-icon sql">SQL</span><b>DDL original do grupo</b><small>Script MySQL Workbench enviado</small><span class="doc-arrow">↓</span></a>
           <a class="doc-card" href="assets/avatar_github.jpg" target="_blank" rel="noopener"><span class="doc-icon img">JPG</span><b>Avatar para GitHub</b><small>Retrato da última conversa, incluído no portfólio</small><span class="doc-arrow">↗</span></a>
         </div>
@@ -117,7 +117,7 @@
     <footer class="footer"><div class="brand"><span class="brand-mark">T</span><span><b>TRIMIX</b><small>DATA GOVERNANCE</small></span></div><p>Projeto acadêmico · Grupo 07 · UNICID · 2026</p><a href="#inicio">Voltar ao topo ↑</a></footer>
   </div>
 
-  <div id="derModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" data-close="true"></div><div class="modal-window"><div class="modal-toolbar"><div><b id="modalTitle">Diagrama Entidade-Relacionamento</b><small>Arraste para mover · use os controles para ampliar</small></div><div class="zoom-controls"><button id="zoomOut" aria-label="Reduzir zoom">−</button><button id="zoomReset" aria-label="Restaurar zoom">↺</button><button id="zoomIn" aria-label="Aumentar zoom">+</button><button id="closeDer" class="close-button" aria-label="Fechar">×</button></div></div><div id="panViewport" class="pan-viewport"><img id="panImage" src="assets/der.png" alt="Diagrama completo Trimix Sorveteria"></div></div></div>
+  <div id="derModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" data-close="true"></div><div class="modal-window"><div class="modal-toolbar"><div><b id="modalTitle">Diagrama Entidade-Relacionamento</b><small>Arraste para mover · use os controles para ampliar</small></div><div class="zoom-controls"><button id="zoomOut" aria-label="Reduzir zoom">−</button><button id="zoomReset" aria-label="Restaurar zoom">↺</button><button id="zoomIn" aria-label="Aumentar zoom">+</button><button id="closeDer" class="close-button" aria-label="Fechar">×</button></div></div><div id="panViewport" class="pan-viewport"><img id="panImage" src="assets/der.svg" alt="Diagrama completo Trimix Sorveteria"></div></div></div>
   <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
   <script src="script.js"></script>
 </body></html>
