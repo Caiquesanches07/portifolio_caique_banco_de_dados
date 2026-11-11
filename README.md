@@ -53,7 +53,9 @@ Abra `index.html` em um navegador moderno. Para testar o comportamento equivalen
 
 ## Pontos de atenção antes da entrega
 
-1. Adicionar o DOC6 original do professor e preencher os campos próprios do projeto.
+1. Adicionar o DOC6 original preenchido pelo grupo.
+2. Inserir o PDF final revisado e o DER final em PNG/JPG nos caminhos exigidos.
+3. Ativar o GitHub Pages e testar a URL pública.riginal do professor e preencher os campos próprios do projeto.
 2. Confirmar Data Owners e Data Stewards com o grupo.
 3. Validar os apontamentos de `docs/diagnostico_coerencia.md`; o DDL original foi preservado sem correções automáticas.
 4. Revisar dados pessoais dos integrantes antes de manter o PDF em um repositório público.
