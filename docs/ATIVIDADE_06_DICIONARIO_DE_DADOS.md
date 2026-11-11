@@ -109,6 +109,16 @@ A entrega individual na plataforma deve conter:
 
 ## 8. Estado dos arquivos neste portfólio
 
-Na auditoria de 10/11/2026, foram encontrados os arquivos web e o DDL, além de diagnósticos de coerência. Ainda precisam ser adicionados ao repositório pessoal o PDF final revisado em `docs/` e o DER exportado em `assets/der.png`. O DOC6 original preenchido e a confirmação dos papéis de Data Owner/Data Steward também permanecem pendentes.
+Na revisão de 11/11/2026, a cópia individual contém a aplicação web, o DDL original, a captura do DER, o pacote editável do MySQL Workbench, o PDF de requisitos em versão de trabalho e o retrato de perfil solicitado pelo autor.
 
-A existência do arquivo de modelo do MySQL Workbench (`.mwb`) não substitui a exportação do DER em PNG/JPG exigida pelo professor. A ativação e o teste do GitHub Pages também precisam ser confirmados.
+Estrutura incorporada:
+
+- `docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf`: consolidação de trabalho com RF01–RF14, RNF01–RNF09, 14 regras e histórico de quatro revisões. O arquivo editável original não foi localizado na cópia consultada; o Grupo 07 precisa comparar e aprovar o PDF antes de considerá-lo oficial.
+- `assets/der.png`: captura do DER/EER no Workbench recebida no contexto do projeto, com 19 entidades visíveis. Ela não representa uma reexportação posterior a correções do modelo.
+- `docs/EER_Diagram_trimix.mwb.zip`: pacote do modelo editável para conferência e atualização no MySQL Workbench.
+- `assets/avatar_github.jpg`: retrato tecnológico da conversa de ajuste do avatar, incluído no repositório e no README.
+- `docs/DIAGNOSTICO_COHERENCIA_DOC6.md` e `docs/PLANO_CORRECOES_DDL.md`: diagnóstico estático e plano de correções, sem alegação de execução/teste em MySQL.
+
+O template integral DOC6 do professor não foi localizado na cópia consultada; este guia da atividade registra os critérios informados e não substitui o prompt oficial. Os papéis de Data Owner e Data Steward também precisam de confirmação formal do grupo.
+
+A configuração de GitHub Pages deve ser verificada em Settings → Pages, com branch `main` e pasta `/(root)`. A URL só deve ser considerada publicada depois de abrir e testar a página e os links de PDF/DER.
