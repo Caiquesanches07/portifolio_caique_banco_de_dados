@@ -1,135 +1,99 @@
-# Dicionário de Dados — Trimix Sorveteria
+<p align="center">
+  <img src="assets/avatar_github.jpg" alt="Avatar do autor para o GitHub" width="132" />
+</p>
 
-Projeto acadêmico do **Grupo 07** da Universidade Cidade de São Paulo (UNICID), desenvolvido na disciplina de Modelagem de Banco de Dados. Este repositório é a cópia individual de portfólio de **Caique Sanches** (`@Caiquesanches07`), integrante do grupo.
+<h1 align="center">Dicionário de Dados — Trimix Sorveteria</h1>
 
-**Projeto:** Sistema de Gestão Operacional e Vendas — Trimix Sorveteria  
-**Banco de dados:** `trimix_sorveteria`  
-**Tecnologia de referência:** MySQL 8.0 / InnoDB  
-**Atividade:** Atividade 6 — Revisão, Governança e Dicionário de Dados
+<p align="center">
+  <strong>Projeto acadêmico do Grupo 07 — Universidade Cidade de São Paulo (UNICID)</strong><br />
+  Sistema de Gestão Operacional e Vendas · MySQL 8.0+
+</p>
 
-> **Status da entrega:** em desenvolvimento. A aplicação web e o inventário do DDL estão no repositório, mas o PDF revisado, o DER em PNG/JPG e a publicação funcional no GitHub Pages ainda precisam ser confirmados/adicionados.
+## Sobre o projeto
 
-## Objetivo
+Dicionário de dados interativo do banco `trimix_sorveteria`, desenvolvido na disciplina de Modelagem de Banco de Dados e organizado para a Atividade 6 — revisão, governança e documentação.
 
-Disponibilizar uma documentação web consultável do modelo relacional da Trimix Sorveteria, favorecendo a compreensão dos metadados, a rastreabilidade entre requisitos e estruturas do banco e a discussão de governança de dados com base em conceitos de **DAMA-DMBOK** e **COBIT**.
+O sistema modela operações de quatro lojas: funcionários, catálogo, estoque, baixas, transferências, caixas, vendas, pagamentos, estornos e auditoria. A premissa de capacidade considera aproximadamente 1.500 transações por dia por loja; esse valor é uma hipótese informada e ainda precisa de validação operacional.
 
-A alfabetização em dados (*Data Literacy*) ajuda a equipe a compreender o significado, a origem, as relações e as restrições das informações, contribuindo para seu uso consistente e responsável.
+## Aplicação web
 
-## Conteúdo e funcionalidades
+A aplicação apresenta o catálogo baseado no DDL original e oferece busca em tempo real, filtros por domínio, tema claro/escuro, visualização do DER com Panzoom.js, Data Literacy e seções de governança, LGPD/GDPR e RBAC.
 
-O inventário estático do DDL registra:
+- **19 tabelas**
+- **113 colunas catalogadas**
+- **29 chaves estrangeiras**
+- **30 triggers**
+- **6 procedures**
 
-- **19 tabelas** e **113 colunas**.
-- **29 chaves estrangeiras**.
-- **30 triggers** e **6 procedures** (36 rotinas no total).
-- Tipos físicos do MySQL, nulabilidade, valores padrão, chaves, índices e relacionamentos.
+A documentação web apresenta metadados e orientações. Ela não comprova, por si só, que RBAC, TLS, hashing, auditoria completa ou testes de concorrência estejam implantados.
 
-A aplicação web já contém:
-
-- Busca em tempo real por tabelas, colunas, tipos SQL e descrições.
-- Filtros por domínio e detalhamento de PK, FK e UK.
-- Alternância entre os temas claro e escuro.
-- Modal de visualização do DER com Panzoom.js e controles de zoom.
-- Seções de Data Literacy, governança, LGPD, GDPR e RBAC.
-- Layout responsivo.
-
-**Atenção aos arquivos externos:** o HTML referencia `assets/der.png` e o PDF de requisitos em `docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf`, mas esses dois arquivos ainda não constam na cópia individual auditada. Portanto, a prévia do DER e o download do PDF só ficarão funcionais depois que os arquivos forem adicionados nos caminhos exatos.
-
-> **Nota de governança:** as classificações LGPD/GDPR e as orientações RBAC exibidas no site são informações documentais. Elas não comprovam, por si só, que controles técnicos de acesso estejam implantados no banco. A menção ao GDPR é comparativa e sua aplicabilidade depende do contexto do tratamento de dados.
-
-## Estrutura atual do repositório
+## Estrutura do repositório
 
 ```text
-portifolio_caique_banco_de_dados/
+.
 ├── index.html
 ├── style.css
 ├── script.js
 ├── README.md
+├── assets/
+│   ├── avatar_github.jpg
+│   └── der.png
 └── docs/
     ├── ADICIONAR_DOC6.txt
     ├── ATIVIDADE_06_DICIONARIO_DE_DADOS.md
     ├── DDL_Original_Trimix.sql
     ├── DIAGNOSTICO_COHERENCIA.md
+    ├── DIAGNOSTICO_COHERENCIA_DOC6.md
+    ├── PLANO_CORRECOES_DDL.md
     ├── STATUS_ENTREGA.md
+    ├── ARTEFATOS_E_FONTES.md
+    ├── Especificacao_Requisitos_Regras_Negocio_BD.pdf
+    ├── EER_Diagram_trimix.mwb.zip
     └── diagnostico_coerencia.md
 ```
 
-## Estrutura obrigatória para concluir a entrega
+## Artefatos e rastreabilidade
 
-Antes de entregar, o repositório também deverá conter:
+| Artefato | Descrição |
+|---|---|
+| `docs/DDL_Original_Trimix.sql` | DDL original preservado sem alterações. |
+| `docs/EER_Diagram_trimix.mwb.zip` | Modelo editável do MySQL Workbench fornecido no contexto do projeto. |
+| `assets/der.png` | Captura do diagrama EER no Workbench recebida do grupo, com as 19 entidades visíveis. |
+| `docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf` | Consolidação de trabalho com RF01–RF14, RNF01–RNF09, regras consolidadas, governança e histórico de quatro revisões. |
+| `docs/DIAGNOSTICO_COHERENCIA_DOC6.md` | Revisão estática de requisitos, DER e DDL, com evidências e riscos. |
+| `docs/PLANO_CORRECOES_DDL.md` | Plano de correções técnicas, organizado em etapas seguras. |
+| `assets/avatar_github.jpg` | Retrato tecnológico da conversa de ajuste do avatar GitHub, incluído a pedido do autor. |
 
-```text
-docs/
-└── Especificacao_Requisitos_Regras_Negocio_BD.pdf
+**Atenção à versão documental:** o arquivo editável original da Especificação de Requisitos e o template integral DOC6 do professor não foram localizados na cópia consultada. O PDF incluído é uma reconstrução/consolidação de trabalho baseada no conteúdo de requisitos v1.1 anteriormente informado, no DDL e no modelo Workbench. Deve ser comparado e aprovado pelo Grupo 07 antes de ser tratado como versão oficial. As regras RB11–RB14 foram formalizadas a partir de validações encontradas no DDL e exigem confirmação do grupo. Data Owner e Data Steward não foram atribuídos por suposição.
 
-assets/
-└── der.png
-```
+## Revisão de coerência — principais pontos
 
-Respeite exatamente letras maiúsculas/minúsculas nos nomes dos arquivos e nas referências do HTML.
+1. Collation `utf8mb4_unicode_ci` no DDL versus `utf8mb4_0900_ai_ci` na especificação.
+2. FK circular entre `loja` e `funcionario`; a FK do responsável de loja precisa ser adicionada depois da criação das duas tabelas.
+3. Ausência de `CHECK` para limites de quantidades, preços, descontos e estoque.
+4. Campos de dados de auditoria em `LONGTEXT`, embora descritos como JSON.
+5. Tratamento de UTC em `log_acesso.data_hora_utc` precisa ser confirmado.
+6. RBAC documentado, mas sem `CREATE ROLE`, `GRANT` e `REVOKE` no DDL.
+7. Baixa/estorno de estoque, transferência, pagamento e fechamento de caixa exigem validação transacional e testes concorrentes.
+8. A procedure de anonimização grava a literal `DESATIVADO` em `senha_hash`, ponto que precisa de revisão.
 
-## Documentação e rastreabilidade
+Os detalhes, a evidência por rotina e as recomendações estão em `docs/DIAGNOSTICO_COHERENCIA_DOC6.md` e `docs/PLANO_CORRECOES_DDL.md`.
 
-- **Orientações da Atividade 6:** `docs/ATIVIDADE_06_DICIONARIO_DE_DADOS.md`
-- **DDL original de referência:** `docs/DDL_Original_Trimix.sql`
-- **Diagnóstico da revisão cruzada:** `docs/diagnostico_coerencia.md`
-- **Status da entrega:** `docs/STATUS_ENTREGA.md`
-- **Pendência do DOC6 oficial:** `docs/ADICIONAR_DOC6.txt`
+## Segurança
 
-O arquivo de modelo do MySQL Workbench enviado pelo grupo foi analisado separadamente. Ele contém o modelo `trimix_sorveteria` com 19 tabelas, 113 colunas e 29 relacionamentos por chave estrangeira. O arquivo compactado `.mwb` não substitui a exportação final em PNG/JPG exigida na atividade.
+O DDL original contém `DROP SCHEMA IF EXISTS trimix_sorveteria`. Não o execute em uma instância com dados que devam ser preservados. Use ambiente de testes descartável e backup restaurável. Nenhuma correção do DDL original foi aplicada automaticamente.
 
-## Equipe
+## GitHub Pages
 
-**Grupo 07 — UNICID**
+Para publicar a cópia individual:
 
-- Marcos Vinicius da Silveira
-- Samuel Victor Ferreira
-- Lohany Shimabukuro
-- Gustavo Cardoso Silva
-- **Caique Sanches** — Analista de Requisitos, com atuação em RNF e métricas de verificação
-- Guilherme David Viana de Oliveira
-- Felipe Domingos de Lacerda
-- Guilherme Nere Ferreira do Nascimento
-- Renato Alexandre Silva de Almeida
-- Alexsander Rosa Ribeiro
-- Gustavo Henrique Lima dos Santos
+1. Abra **Settings → Pages**.
+2. Em **Build and deployment**, selecione **Deploy from a branch**.
+3. Escolha a branch `main` e a pasta `/(root)`.
+4. Salve e aguarde o processamento.
+5. Abra a URL abaixo e confirme que a aplicação e os links do PDF/DER carregam.
 
-Os papéis específicos de **Data Owner** e **Data Steward** ainda dependem de definição ou confirmação pelo grupo. As funções acadêmicas acima não devem ser confundidas com esses papéis de governança.
+- **Repositório:** <https://github.com/Caiquesanches07/portifolio_caique_banco_de_dados>
+- **Pages esperado (depende de ativação e deploy):** <https://Caiquesanches07.github.io/portifolio_caique_banco_de_dados/>
 
-## Verificação de coerência e pontos de atenção
-
-A análise estática identificou pontos que precisam ser tratados e validados pelo grupo:
-
-1. O DDL recebido usa `utf8mb4_unicode_ci`, enquanto a especificação registra `utf8mb4_0900_ai_ci`.
-2. Há uma dependência circular entre `loja` e `funcionario`; a FK de responsável da loja deve ser criada após as duas tabelas existirem, conforme a estratégia definida pelo grupo.
-3. A especificação prevê restrições `CHECK`, mas nenhuma cláusula `CHECK` foi encontrada no DDL recebido.
-4. `log_auditoria.dados_anteriores` e `dados_novos` estão como `LONGTEXT`, enquanto a especificação descreve JSON.
-5. `log_acesso.data_hora_utc` usa `CURRENT_TIMESTAMP()`, divergindo da orientação de geração explícita em UTC.
-6. A matriz RBAC aparece documentada, mas não foram encontrados comandos `CREATE ROLE`, `GRANT` ou `REVOKE` no DDL.
-7. Baixa/estorno de estoque, validação dos pagamentos e concorrência precisam de testes e validação do grupo.
-
-A análise é estática: a execução integral do DDL em MySQL 8.0 e os testes de integridade, concorrência e permissões não foram comprovados nesta entrega. O DDL original foi preservado para rastreabilidade; não execute o script em um banco com dados que precisem ser mantidos, pois ele contém `DROP SCHEMA IF EXISTS trimix_sorveteria`.
-
-## Checklist para concluir a Atividade 6
-
-- [x] Aplicação web com `index.html`, `style.css` e `script.js`.
-- [x] Inventário do DDL: 19 tabelas, 113 colunas e 29 FKs.
-- [x] Registro das orientações do professor para a Atividade 6.
-- [x] Diagnóstico estático de coerência.
-- [ ] Anexar o DOC6 original preenchido com os dados do grupo.
-- [ ] Definir Data Owners e Data Stewards.
-- [ ] Aplicar e validar as correções aprovadas nos documentos originais.
-- [ ] Atualizar o histórico de revisões da especificação para, no mínimo, quatro revisões.
-- [ ] Exportar e adicionar o PDF final em `docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf`.
-- [ ] Atualizar/exportar o DER em PNG/JPG e adicionar em `assets/der.png`.
-- [ ] Testar o dicionário, a busca, o tema, o modal e o download dos documentos.
-- [ ] Ativar e validar o GitHub Pages individual.
-
-## Publicação individual
-
-O repositório é público e usa a branch `main`. Para concluir o deploy, abra **Settings → Pages**, selecione **Deploy from a branch**, escolha `main` e `/(root)`, e salve.
-
-**Repositório:** https://github.com/Caiquesanches07/portifolio_caique_banco_de_dados  
-**URL esperada do GitHub Pages após ativação:** https://Caiquesanches07.github.io/portifolio_caique_banco_de_dados/
-
-A URL acima é a rota esperada pelo nome do repositório; ela não deve ser considerada publicada até o GitHub Pages concluir o deploy e o acesso ser testado.
+A configuração e a publicação do GitHub Pages ainda precisam ser confirmadas no painel do repositório; não se declara o deploy como concluído nesta revisão.
