@@ -58,7 +58,7 @@ A documentação web apresenta metadados e orientações. Ela não comprova, por
 |---|---|
 | `docs/DDL_Original_Trimix.sql` | DDL original preservado sem alterações. |
 | `docs/EER_Diagram_trimix.mwb.zip` | Modelo editável do MySQL Workbench fornecido no contexto do projeto. |
-| `assets/der.png` | Captura do diagrama EER no Workbench recebida do grupo, com as 19 entidades visíveis. |
+| `assets/der.svg` | Mapa vetorial de relacionamentos gerado do DDL original; a captura original do Workbench é mantida como evidência local, não substituída. |
 | `docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf` | Consolidação de trabalho com RF01–RF14, RNF01–RNF09, regras consolidadas, governança e histórico de quatro revisões. |
 | `docs/DIAGNOSTICO_COHERENCIA_DOC6.md` | Revisão estática de requisitos, DER e DDL, com evidências e riscos. |
 | `docs/PLANO_CORRECOES_DDL.md` | Plano de correções técnicas, organizado em etapas seguras. |
