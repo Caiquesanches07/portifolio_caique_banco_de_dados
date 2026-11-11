@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1510" height="1010" viewBox="0 0 1510 1010">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#4c83b7"/></marker></defs>
+<rect width="100%" height="100%" fill="#f5f8fb"/>
+<text x="38" y="48" font-family="Arial" font-size="26" font-weight="bold" fill="#173c5e">DER — Trimix Sorveteria</text>
+<text x="38" y="76" font-family="Arial" font-size="14" fill="#46586a">Mapa de relacionamentos gerado a partir do DDL original · 0 tabelas · 0 chaves estrangeiras</text>
+
+
+<text x="38" y="980" font-family="Arial" font-size="12" fill="#526170">Setas indicam a referência da chave estrangeira. Confira os detalhes de colunas, cardinalidade e regras no DDL e no Workbench.</text>
+</svg>
