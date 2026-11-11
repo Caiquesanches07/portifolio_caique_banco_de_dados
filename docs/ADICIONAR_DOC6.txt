@@ -1,0 +1,11 @@
+DOC6 - GERADOR DO DICIONÁRIO DE DADOS
+
+O DOC6 original não foi enviado nesta conversa. Este arquivo é apenas um aviso de pendência e NÃO substitui o documento oficial do professor.
+
+Quando estiver disponível:
+1. Adicione o DOC6 em docs/.
+2. Preencha Nome do Projeto, integrantes e papéis Data Owner/Data Steward, cores, resumo e nomes dos três artefatos anexos.
+3. Confira as instruções finais do prompt e atualize as atribuições de governança no index.html / script.js.
+4. Guarde o DOC6 preenchido como registro do processo.
+
+Não atribuir Data Owners ou Data Stewards por suposição. A especificação v1.2 registra que estes papéis ainda não foram nomeados pelo grupo.
