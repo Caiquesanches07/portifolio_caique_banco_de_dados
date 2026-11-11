@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dicionário de dados interativo do Sistema de Gestão Operacional e Vendas da Trimix Sorveteria.">
+  <meta name="theme-color" content="#10283f">
+  <title>Trimix Sorveteria | Dicionário de Dados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Trimix - início"><span class="brand-mark">T</span><span><b>TRIMIX</b><small>DATA GOVERNANCE</small></span></a>
+      <nav class="topnav"><a href="#explorador">Dicionário</a><a href="#governanca">Governança</a><a href="#documentos">Documentação</a></nav>
+      <div class="top-actions"><span class="version-chip">PREVIEW · v0.1</span><button id="themeToggle" class="icon-button" aria-label="Alternar tema" title="Alternar tema">◐</button></div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> UNIVERSIDADE CIDADE DE SÃO PAULO · GRUPO 07</div>
+          <h1>Conheça os dados<br><em>por trás da operação.</em></h1>
+          <p>Documentação técnica e catálogo de metadados do Sistema de Gestão Operacional e Vendas da Trimix Sorveteria.</p>
+          <div class="hero-tags"><span>MySQL 8.0+</span><span>InnoDB</span><span>LGPD</span><span>RBAC</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="hero-db"><div class="db-top"></div><div class="db-lines"><i></i><i></i><i></i></div></div><div class="float-chip chip-a">SQL <b>↗</b></div><div class="float-chip chip-b">19 TABELAS</div><div class="float-chip chip-c">DATA QUALITY</div></div>
+      </section>
+
+      <section class="metrics" aria-label="Resumo do banco de dados">
+        <article class="metric-card"><span class="metric-icon">▦</span><strong id="metricTables">19</strong><small>Tabelas documentadas</small></article>
+        <article class="metric-card"><span class="metric-icon">⌗</span><strong id="metricColumns">113</strong><small>Colunas no DDL</small></article>
+        <article class="metric-card"><span class="metric-icon">⛓</span><strong id="metricRelations">29</strong><small>Chaves estrangeiras</small></article>
+        <article class="metric-card"><span class="metric-icon">✓</span><strong id="metricRoutines">36</strong><small>Triggers e procedures</small></article>
+      </section>
+
+      <section class="section-intro" id="explorador">
+        <div><div class="eyebrow">CATÁLOGO TÉCNICO</div><h2>Explorador de dados</h2><p>Pesquise tabelas, colunas, tipos SQL e regras de negócio. Os resultados são atualizados enquanto você digita.</p></div>
+        <div class="source-pill"><span class="source-dot"></span> Fonte: DDL recebido pelo Grupo 07</div>
+      </section>
+
+      <section class="explorer-layout">
+        <aside class="filters-panel">
+          <div class="filter-heading">DOMÍNIOS <button id="clearFilters" class="text-button">Limpar</button></div>
+          <div id="groupFilters" class="group-filters"></div>
+          <div class="filter-note"><b>Como consultar</b><p>Abra uma tabela para visualizar as colunas, tipos físicos do MySQL, nulabilidade, chaves, valores padrão e observações de governança.</p></div>
+        </aside>
+        <div class="catalog-main">
+          <div class="search-row"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar tabela, coluna, tipo ou descrição..." autocomplete="off"><kbd>⌘ K</kbd></label><span id="resultCount" class="result-count">19 tabelas</span></div>
+          <div id="activeFilters" class="active-filters"></div>
+          <div id="tableList" class="table-list" aria-live="polite"></div>
+          <div id="emptyState" class="empty-state hidden"><div>⌕</div><b>Nenhum resultado encontrado</b><p>Tente outro nome de tabela, coluna ou termo técnico.</p></div>
+        </div>
+      </section>
+
+      <section class="der-section">
+        <div class="section-heading"><div><div class="eyebrow">MODELO RELACIONAL</div><h2>Diagrama Entidade-Relacionamento</h2><p>Visualização derivada do DDL enviado. Amplie e mova o diagrama para explorar os relacionamentos.</p></div><button id="openDer" class="primary-button">Abrir visualizador <span>↗</span></button></div>
+        <button id="derPreview" class="der-preview" aria-label="Abrir diagrama completo"><img src="assets/der.png" alt="Diagrama Entidade-Relacionamento do banco Trimix Sorveteria"><span class="preview-overlay">Clique para ampliar <b>＋</b></span></button>
+        <p class="fineprint">A cardinalidade é inferida das chaves estrangeiras e das restrições de unicidade declaradas no DDL. Regras adicionais implementadas por triggers/procedures devem ser conferidas com o grupo.</p>
+      </section>
+
+      <section class="governance-section" id="governanca">
+        <div class="section-heading"><div><div class="eyebrow">DMBOK · COBIT · LGPD</div><h2>Governança e responsabilidade</h2><p>Princípios de qualidade, segurança, rastreabilidade e uso responsável dos dados.</p></div></div>
+        <div class="governance-grid">
+          <article class="governance-card"><div class="gov-icon cyan">◈</div><h3>Data Literacy</h3><p>Alfabetização em dados é a capacidade de ler, interpretar, questionar e comunicar informações com contexto. Neste projeto, o dicionário descreve o significado das colunas, seus tipos, restrições e relações, apoiando o uso consistente dos dados por pessoas técnicas e de negócio.</p></article>
+          <article class="governance-card"><div class="gov-icon blue">◎</div><h3>Data Ownership</h3><p>O Data Owner responde pelas definições, uso e decisões sobre os dados do domínio.</p><div class="role-placeholder">Responsável: <b>A definir pelo Grupo 07 / DOC6</b></div></article>
+          <article class="governance-card"><div class="gov-icon violet">⌘</div><h3>Data Stewardship</h3><p>O Data Steward acompanha qualidade, metadados, padronização e aplicação das regras no dia a dia.</p><div class="role-placeholder">Responsável: <b>A definir pelo Grupo 07 / DOC6</b></div></article>
+          <article class="governance-card"><div class="gov-icon green">⌁</div><h3>Qualidade e rastreabilidade</h3><p>Chaves, restrições, histórico de vendas, auditoria e validações transacionais ajudam a preservar consistência e explicar a origem das informações.</p></article>
+        </div>
+        <div class="compliance-row"><div><b>LGPD</b><span>Dados pessoais e registros de acesso requerem finalidade, minimização, proteção e retenção definida.</span></div><div><b>GDPR</b><span>Aplicabilidade não declarada no escopo recebido; avaliar caso existam titulares ou operações sujeitos à norma.</span></div><div><b>RBAC</b><span>Permissões previstas por papel: ATENDENTE, GERENTE e ADMINISTRADOR. Menor privilégio e ausência de exclusão física.</span></div></div>
+        <div class="rbac-card"><div><div class="eyebrow">MATRIZ DE ACESSO</div><h3>Controle de acesso baseado em papéis</h3><p>Resumo da matriz descrita na especificação de requisitos. O script SQL recebido não contém comandos CREATE ROLE/GRANT/REVOKE; a implementação técnica dos privilégios permanece como ponto de validação.</p></div><div class="rbac-roles"><div><b>ATENDENTE</b><small>Consulta catálogo e registra vendas/pagamentos.</small></div><div><b>GERENTE</b><small>Permissões do atendente e gestão operacional autorizada.</small></div><div><b>ADMINISTRADOR</b><small>Gestão cadastral e execução de rotinas administrativas previstas.</small></div></div></div>
+      </section>
+
+      <section class="quality-section">
+        <div class="section-heading"><div><div class="eyebrow">REVISÃO ESTÁTICA</div><h2>Pontos para validação</h2><p>Divergências observadas ao comparar requisitos, DER e DDL. Estes itens não devem ser considerados corrigidos até serem aplicados e testados no banco.</p></div><span class="status-badge">REVISÃO PENDENTE</span></div>
+        <div class="issue-list">
+          <article><span class="severity high">ALTA</span><div><b>FK circular de responsável local</b><p>A FK loja → funcionario é declarada antes da criação de funcionario; o requisito prevê adicioná-la depois com ALTER TABLE.</p></div></article>
+          <article><span class="severity high">ALTA</span><div><b>CHECKs não declarados</b><p>O documento prevê validações de preços, quantidades, descontos e estoque; o DDL entregue não contém cláusulas CHECK.</p></div></article>
+          <article><span class="severity high">ALTA</span><div><b>Baixa de estoque e total de pagamentos</b><p>Revisar saldo negativo no gatilho de baixa e incluir validação transacional do total pago antes de finalizar a venda.</p></div></article>
+          <article><span class="severity medium">MÉDIA</span><div><b>Collation, JSON e UTC</b><p>O DDL usa utf8mb4_unicode_ci, LONGTEXT para dados de auditoria e CURRENT_TIMESTAMP para data_hora_utc; a especificação prevê utf8mb4_0900_ai_ci, JSON e UTC_TIMESTAMP.</p></div></article>
+          <article><span class="severity medium">MÉDIA</span><div><b>RBAC e ON DELETE</b><p>Não foram localizados GRANT/CREATE ROLE; as FKs não explicitam ON DELETE RESTRICT embora o requisito o determine.</p></div></article>
+        </div>
+        <a class="doc-link" href="docs/diagnostico_coerencia.md" target="_blank" rel="noopener">Ler diagnóstico completo <span>↗</span></a>
+      </section>
+
+      <section class="docs-section" id="documentos">
+        <div class="section-heading"><div><div class="eyebrow">ARQUIVOS DO PROJETO</div><h2>Documentação técnica</h2><p>Materiais de referência utilizados na construção desta versão preliminar.</p></div></div>
+        <div class="docs-grid">
+          <a class="doc-card" href="docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf" target="_blank"><span class="doc-icon pdf">PDF</span><b>Especificação de Requisitos</b><small>Versão revisada 1.2 · PDF</small><span class="doc-arrow">↗</span></a>
+          <a class="doc-card" href="assets/der.png" target="_blank"><span class="doc-icon img">PNG</span><b>Diagrama ER</b><small>DER atualizado a partir do DDL</small><span class="doc-arrow">↗</span></a>
+          <a class="doc-card" href="docs/DDL_Original_Trimix.sql" download><span class="doc-icon sql">SQL</span><b>Script DDL original</b><small>Arquivo de referência recebido</small><span class="doc-arrow">↓</span></a>
+          <div class="doc-card doc-pending"><span class="doc-icon pending">DOC6</span><b>Prompt do professor</b><small>Adicionar manualmente em docs/</small><span class="pending-label">PENDENTE</span></div>
+        </div>
+        <p class="privacy-note"><b>Atenção ao DDL:</b> o script original contém DROP SCHEMA IF EXISTS trimix_sorveteria e apagaria um schema existente com esse nome se executado. Use apenas em ambiente de testes. Antes de publicar o repositório como público, revise os dados pessoais dos integrantes no PDF original (por exemplo, números de registro acadêmico).</p>
+      </section>
+    </main>
+    <footer class="footer"><div class="brand"><span class="brand-mark">T</span><span><b>TRIMIX</b><small>DATA GOVERNANCE</small></span></div><p>Projeto acadêmico · Grupo 07 · UNICID · 2026</p><a href="#inicio">Voltar ao topo ↑</a></footer>
+  </div>
+
+  <div id="derModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-backdrop" data-close="true"></div><div class="modal-window"><div class="modal-toolbar"><div><b id="modalTitle">Diagrama Entidade-Relacionamento</b><small>Arraste para mover · use os controles para ampliar</small></div><div class="zoom-controls"><button id="zoomOut" aria-label="Reduzir zoom">−</button><button id="zoomReset" aria-label="Restaurar zoom">↺</button><button id="zoomIn" aria-label="Aumentar zoom">+</button><button id="closeDer" class="close-button" aria-label="Fechar">×</button></div></div><div id="panViewport" class="pan-viewport"><img id="panImage" src="assets/der.png" alt="Diagrama completo Trimix Sorveteria"></div></div></div>
+  <script src="https://unpkg.com/@panzoom/panzoom@4.6.0/dist/panzoom.min.js"></script>
+  <script src="script.js"></script>
+</body></html>
